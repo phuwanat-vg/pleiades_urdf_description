@@ -1,0 +1,11 @@
+<launch>
+  <param command="$(find xacro)/xacro $(find pleiades_urdf_description)/urdf/pleiades_urdf.xacro" name="robot_description"/>
+  <node args="-param robot_description -urdf -model pleiades_urdf" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
+  
+
+  <include file="$(find pleiades_urdf_description)/launch/uwb_world.launch">
+   
+  </include>
+  
+  
+</launch>

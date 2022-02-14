@@ -1,0 +1,700 @@
+<?xml version="1.0" ?>
+<robot name="pleiades_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find pleiades_urdf_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find pleiades_urdf_description)/urdf/pleiades_urdf.trans" />
+<xacro:include filename="$(find pleiades_urdf_description)/urdf/pleiades_urdf.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.01067174697470997 -0.0001498959033966818 0.03770692237544668"/>
+    <mass value="0.08556129509613171"/>
+    <inertia ixx="2.4e-05" ixy="-0.0" ixz="1e-06" iyy="5.3e-05" iyz="-0.0" izz="4.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="bottom_base_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.09397928884806224 0.00021138284396473458 0.0012499266944829904"/>
+    <mass value="0.4841413688424101"/>
+    <inertia ixx="0.000709" ixy="1e-06" ixz="0.0" iyy="0.001516" iyz="0.0" izz="0.002224"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.01997 0.00015 -0.0581"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/bottom_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.01997 0.00015 -0.0581"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/bottom_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_motor_mount_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.5253385876249663e-07 0.002347524346010217 -0.008401593188384217"/>
+    <mass value="0.10531967212478048"/>
+    <inertia ixx="5e-05" ixy="0.0" ixz="0.0" iyy="3.3e-05" iyz="-1.2e-05" izz="5.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.009846 0.060853 -0.0581"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/left_motor_mount_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.009846 0.060853 -0.0581"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/left_motor_mount_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.007500452533380589 0.02927823606058797 -0.012854213443873969"/>
+    <mass value="0.45623309093447373"/>
+    <inertia ixx="0.000203" ixy="-0.0" ixz="0.0" iyy="6.5e-05" iyz="2e-06" izz="0.000203"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.002096 0.07299 -0.048989"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/right_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.002096 0.07299 -0.048989"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/right_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.5253336527877053e-07 -0.004899715078128003 4.39396376984702e-07"/>
+    <mass value="0.18531458392919598"/>
+    <inertia ixx="0.000117" ixy="-0.0" ixz="0.0" iyy="0.000232" iyz="0.0" izz="0.000117"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.009596 0.08279 -0.042998"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.009596 0.08279 -0.042998"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_motor_mount_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.5253302327803724e-07 -0.002347316152802155 -0.008401593188385965"/>
+    <mass value="0.10531967212478122"/>
+    <inertia ixx="5e-05" ixy="0.0" ixz="-0.0" iyy="3.3e-05" iyz="1.2e-05" izz="5.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.009846 -0.060553 -0.0581"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/right_motor_mount_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.009846 -0.060553 -0.0581"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/right_motor_mount_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.007500452533361894 -0.02927802786738016 -0.012854213443875745"/>
+    <mass value="0.45623309093447373"/>
+    <inertia ixx="0.000203" ixy="-0.0" ixz="0.0" iyy="6.5e-05" iyz="-2e-06" izz="0.000203"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.002096 -0.07269 -0.048989"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/left_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.002096 -0.07269 -0.048989"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/left_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.5253337761438917e-07 0.004899923271335704 4.3939637317524927e-07"/>
+    <mass value="0.18531458392919575"/>
+    <inertia ixx="0.000117" ixy="-0.0" ixz="0.0" iyy="0.000232" iyz="-0.0" izz="0.000117"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.009596 -0.08249 -0.042998"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.009596 -0.08249 -0.042998"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pillar1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.525332663388171e-07 -7.672866356167596e-08 0.019999926694482598"/>
+    <mass value="0.0032870873202021362"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.009846 -0.060553 -0.0606"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/pillar1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.009846 -0.060553 -0.0606"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/pillar1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pillar2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.525332670934218e-07 2.8492187218592813e-07 0.01999992669448429"/>
+    <mass value="0.0032870873202021245"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.009846 0.060853 -0.0606"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/pillar2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.009846 0.060853 -0.0606"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/pillar2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pillar3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.877609977860242e-07 1.0685254771269914e-07 0.019999926694482237"/>
+    <mass value="0.0032870873202021215"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.123003 -0.066186 -0.0606"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/pillar3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.123003 -0.066186 -0.0606"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/pillar3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pillar4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.877609963566121e-07 1.0134066218137061e-07 0.0199999266944845"/>
+    <mass value="0.0032870873202021046"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="-0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.123003 0.066486 -0.0606"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/pillar4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.123003 0.066486 -0.0606"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/pillar4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_base_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.006364368856124514 3.9110904331271295e-07 -0.022893131879742616"/>
+    <mass value="0.038824976750547"/>
+    <inertia ixx="1.2e-05" ixy="0.0" ixz="-1e-06" iyy="1.1e-05" iyz="0.0" izz="4e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.167314 0.00015 -0.0581"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/caster_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.167314 0.00015 -0.0581"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/caster_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.4012190277114855 -0.017049895903761096 -0.10882994966817007"/>
+    <mass value="0.017540016863249085"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="1e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.238055 -0.0169 -0.119264"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.238055 -0.0169 -0.119264"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="mid_base_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.07019370740620945 -0.060699070824760205 0.0009999266944828306"/>
+    <mass value="0.37927916955082314"/>
+    <inertia ixx="0.000696" ixy="0.0" ixz="0.0" iyy="0.000953" iyz="0.0" izz="0.001648"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.009846 -0.060553 -0.1006"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/mid_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.009846 -0.060553 -0.1006"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/mid_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_base1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.030022046558008622 0.002453358788288715 0.03453663460441045"/>
+    <mass value="0.07275637237577388"/>
+    <inertia ixx="3.4e-05" ixy="0.0" ixz="-0.0" iyy="8e-05" iyz="0.0" izz="4.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.040559 -0.068009 -0.1026"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/lidar_base1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.040559 -0.068009 -0.1026"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/lidar_base1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_base2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.029977982203639064 -0.002453150617436603 0.03453663460440984"/>
+    <mass value="0.0727563723757646"/>
+    <inertia ixx="3.4e-05" ixy="0.0" ixz="0.0" iyy="8e-05" iyz="-0.0" izz="4.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.040559 0.068309 -0.1026"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/lidar_base2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.040559 0.068309 -0.1026"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/lidar_base2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LidarBase_v6_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.030321017856748518 -0.06314690599641222 0.0012504981230569423"/>
+    <mass value="0.21418373868342366"/>
+    <inertia ixx="0.000366" ixy="-0.0" ixz="0.0" iyy="0.00017" iyz="-0.0" izz="0.000536"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.035559 -0.063009 -0.169653"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/LidarBase_v6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.035559 -0.063009 -0.169653"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/LidarBase_v6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.026705914586945996 -0.024999610214177823 0.037701640345846804"/>
+    <mass value="1.1515616542314269"/>
+    <inertia ixx="0.000489" ixy="0.0" ixz="0.000148" iyy="0.000861" iyz="-0.0" izz="0.000987"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.035559 -0.024849 -0.172153"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.035559 -0.024849 -0.172153"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="imu_base_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.02604899049491445 -0.0004124332580116852 0.0019766786912428225"/>
+    <mass value="0.012225303508456705"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="0.0" iyy="1e-06" iyz="-0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.005425 0.00015 -0.1026"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/imu_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.005425 0.00015 -0.1026"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/imu_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="imu_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.006624177438635075 -0.008200335878831544 0.0008298472526827166"/>
+    <mass value="0.004781378178312684"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="-0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.033025 -0.00795 -0.1066"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/imu_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.033025 -0.00795 -0.1066"/>
+    <geometry>
+      <mesh filename="package://pleiades_urdf_description/meshes/imu_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid323" type="fixed">
+  <origin rpy="0 0 0" xyz="0.01997 -0.00015 0.0581"/>
+  <parent link="base_link"/>
+  <child link="bottom_base_1"/>
+</joint>
+
+<joint name="Rigid324" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.029816 -0.060703 0.0"/>
+  <parent link="bottom_base_1"/>
+  <child link="left_motor_mount_1"/>
+</joint>
+
+<joint name="Rigid325" type="fixed">
+  <origin rpy="0 0 0" xyz="0.00775 -0.012137 -0.009111"/>
+  <parent link="left_motor_mount_1"/>
+  <child link="right_motor_1"/>
+</joint>
+
+<joint name="right_wheel_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.0075 -0.0098 -0.005991"/>
+  <parent link="right_motor_1"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid327" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.029816 0.060703 0.0"/>
+  <parent link="bottom_base_1"/>
+  <child link="right_motor_mount_1"/>
+</joint>
+
+<joint name="Rigid328" type="fixed">
+  <origin rpy="0 0 0" xyz="0.00775 0.012137 -0.009111"/>
+  <parent link="right_motor_mount_1"/>
+  <child link="left_motor_1"/>
+</joint>
+
+<joint name="left_wheel_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.0075 0.0098 -0.005991"/>
+  <parent link="left_motor_1"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Rigid330" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.029816 0.060703 0.0025"/>
+  <parent link="bottom_base_1"/>
+  <child link="pillar1_1"/>
+</joint>
+
+<joint name="Rigid331" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.029816 -0.060703 0.0025"/>
+  <parent link="bottom_base_1"/>
+  <child link="pillar2_1"/>
+</joint>
+
+<joint name="Rigid332" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.142973 0.066336 0.0025"/>
+  <parent link="bottom_base_1"/>
+  <child link="pillar3_1"/>
+</joint>
+
+<joint name="Rigid333" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.142973 -0.066336 0.0025"/>
+  <parent link="bottom_base_1"/>
+  <child link="pillar4_1"/>
+</joint>
+
+<joint name="Rigid334" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.187284 0.0 0.0"/>
+  <parent link="bottom_base_1"/>
+  <child link="caster_base_1"/>
+</joint>
+
+<joint name="Rigid335" type="fixed">
+  <origin rpy="0 0 0" xyz="0.405369 0.01705 0.061164"/>
+  <parent link="caster_base_1"/>
+  <child link="caster_wheel_1"/>
+</joint>
+
+<joint name="Rigid336" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.04"/>
+  <parent link="pillar1_1"/>
+  <child link="mid_base_1"/>
+</joint>
+
+<joint name="Rigid337" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.030713 0.007456 0.002"/>
+  <parent link="mid_base_1"/>
+  <child link="lidar_base1_1"/>
+</joint>
+
+<joint name="Rigid338" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.030713 -0.128862 0.002"/>
+  <parent link="mid_base_1"/>
+  <child link="lidar_base2_1"/>
+</joint>
+
+<joint name="Rigid339" type="fixed">
+  <origin rpy="0 0 0" xyz="0.005 -0.005 0.067053"/>
+  <parent link="lidar_base1_1"/>
+  <child link="LidarBase_v6_1"/>
+</joint>
+
+<joint name="Rigid340" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.03816 0.0025"/>
+  <parent link="LidarBase_v6_1"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="Rigid341" type="fixed">
+  <origin rpy="0 0 0" xyz="0.004421 -0.060703 0.002"/>
+  <parent link="mid_base_1"/>
+  <child link="imu_base_1"/>
+</joint>
+
+<joint name="Rigid342" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0276 0.0081 0.004"/>
+  <parent link="imu_base_1"/>
+  <child link="imu_1"/>
+</joint>
+
+
+<gazebo>
+<plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+
+    <!-- Plugin update rate in Hz -->
+    <updateRate>20.0</updateRate>
+    <!-- Name of left joint, defaults to `left_joint` -->
+    <leftJoint>left_wheel_joint</leftJoint>
+
+    <!-- Name of right joint, defaults to `right_joint` -->
+    <rightJoint>right_wheel_joint</rightJoint>
+
+    <!-- The distance from the center of one wheel to the other, in meters, defaults to 0.34 m -->
+    <wheelSeparation>0.178</wheelSeparation>
+
+    <!-- Diameter of the wheels, in meters, defaults to 0.15 m -->
+    <wheelDiameter>0.0845</wheelDiameter>
+
+    <!-- Wheel acceleration, in rad/s^2, defaults to 0.0 rad/s^2 -->
+    <wheelAcceleration>1.0</wheelAcceleration>
+
+    <!-- Maximum torque which the wheels can produce, in Nm, defaults to 5 Nm -->
+    <wheelTorque>50</wheelTorque>
+
+    <!-- Topic to receive geometry_msgs/Twist message commands, defaults to `cmd_vel` -->
+    <commandTopic>cmd_vel</commandTopic>
+
+    <!-- Topic to publish nav_msgs/Odometry messages, defaults to `odom` -->
+    <odometryTopic>odom/raw</odometryTopic>
+
+    <!-- Odometry frame, defaults to `odom` -->
+    <odometryFrame>odom</odometryFrame>
+
+    <!-- Robot frame to calculate odometry from, defaults to `base_footprint` -->
+    <robotBaseFrame>base_link</robotBaseFrame>
+
+    <!-- Odometry source, 0 for ENCODER, 1 for WORLD, defaults to WORLD -->
+    <odometrySource>0</odometrySource>
+
+    <!-- Set to true to publish transforms for the wheel links, defaults to false -->
+    <publishWheelTF>true</publishWheelTF>
+
+    <!-- Set to true to publish transforms for the odometry, defaults to true -->
+    <publishOdom>true</publishOdom>
+
+    <!-- Set to true to publish sensor_msgs/JointState on /joint_states for the wheel joints, defaults to false -->
+    <publishWheelJointState>true</publishWheelJointState>
+
+    <!-- Set to true to swap right and left wheels, defaults to true -->
+    <legacyMode>false</legacyMode>
+  </plugin>
+</gazebo>
+
+ <gazebo reference="lidar_1">
+        <sensor type="ray" name="pleiades_laser">
+        <update_rate>20</update_rate>
+        <ray>
+         <scan>
+            <horizontal>
+                <samples>720</samples>
+                <!--<resolution>0.5</resolution>-->
+                <min_angle>-3.14159</min_angle>
+                <max_angle>3.14159</max_angle>
+            </horizontal>
+        </scan>
+        <range>
+             <min>0.2</min>
+             <max>10.0</max>
+             <resolution>0.01</resolution>
+        </range>
+        <noise>
+              <type>gaussian</type>
+              <mean>0.0</mean>
+              <stddev>0.01</stddev>
+        </noise>
+        </ray>
+        <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>laser_frame</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+  
+  <gazebo>
+   
+      <plugin name='libgtec_uwb_plugin' filename='libgtec_uwb_plugin.so'>
+      <update_rate>25</update_rate>
+      <nlosSoftWallWidth>0.25</nlosSoftWallWidth>   <!--  Comment  -->
+      <tag_z_offset>1.5</tag_z_offset>
+      <tag_link>tag_0</tag_link>
+      <anchor_prefix>uwb_anchor</anchor_prefix>
+      <all_los>false</all_los>
+      <tag_id>0</tag_id>
+    </plugin>
+    
+  </gazebo>
+  
+  
+  <gazebo>
+    <plugin name="imu_controller" filename="libhector_gazebo_ros_imu.so">
+     
+      <updateRate>50.0</updateRate>
+      <bodyName>base_link</bodyName>
+      <topicName>imu/data</topicName>
+      <accelDrift>0.005 0.005 0.005</accelDrift>
+      <accelGaussianNoise>0.005 0.005 0.005</accelGaussianNoise>
+      <rateDrift>0.005 0.005 0.005 </rateDrift>
+      <rateGaussianNoise>0.005 0.005 0.005 </rateGaussianNoise>
+      <headingDrift>0.005</headingDrift>
+      <headingGaussianNoise>0.005</headingGaussianNoise>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="gps_controller" filename="libhector_gazebo_ros_gps.so">
+     
+      <updateRate>40</updateRate>
+      <bodyName>base_link</bodyName>
+      <frameId>base_link</frameId>
+      <topicName>gps/fix</topicName>
+      <velocityTopicName>gps/vel</velocityTopicName>
+      <referenceLatitude>0.0</referenceLatitude>
+      <referenceLongitude>0.0</referenceLongitude>
+      <referenceHeading>0</referenceHeading>
+      <referenceAltitude>0</referenceAltitude>
+      <drift>0.0001 0.0001 0.0001</drift>
+    </plugin>
+  </gazebo>
+
+
+</robot>

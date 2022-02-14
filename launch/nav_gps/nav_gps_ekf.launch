@@ -1,0 +1,17 @@
+<launch>
+         <node pkg="tf" type="static_transform_publisher" name="base_footprint_to_laser"
+    args="-0.0609 0.0 0.19 0.0 0.0  0.0 /base_link /laser_frame 40" />
+    
+	<include file = "$(find pleiades_urdf_description)/launch/nav_gps/start_navsat.launch"/>
+	
+	<node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization_with_gps">
+	<rosparam command="load" file="$(find pleiades_urdf_description)/config/robot_localization_with_gps.yaml"/>
+	
+	</node>
+	
+	<node name="map_server" pkg="map_server" type = "map_server" args ="$(find pleiades_urdf_description)/maps/empty_map.yaml"/>
+	
+
+	
+	<include file = "$(find pleiades_urdf_description)/launch/nav_gps/movebase.launch"/>
+</launch>
